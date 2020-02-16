@@ -19,7 +19,7 @@ namespace Memoriah
         template<typename T>
         void WPM(const DWORD address, T data)
         {
-            WriteProcessMemory(m_hProcess, reinterpret_cast<LPCVOID>(address), &data, sizeof(data), nullptr);
+            WriteProcessMemory(m_hProcess, reinterpret_cast<LPVOID>(address), &data, sizeof(data), nullptr);
         }
 
         template<typename T>
